@@ -1,0 +1,24 @@
+version: '2'
+services:
+  nginx:
+    build: ./nginx
+    ports:
+      - "80:80"
+  web:
+    build: .
+    command: npm run start
+    volumes:
+      - .:/usr/src/nodejs-boilerplate
+      - /usr/src/nodejs-boilerplate/node_modules
+    ports:
+      - "4003:4003"
+    depends_on:
+      - postgres
+    environment:
+      NODEJS_BOILERPLATE_PROD_DATABASE_URL: postgres://localhost:5432/nodejs-boilerplate
+      NODEJS_BOILERPLATE_PROD_JWT_SECRET: jhdsdecreeirt
+      NODE_ENV: production
+  postgres:
+    image: postgres:9.6.2-alpine
+    ports:
+      - "5432:5432"

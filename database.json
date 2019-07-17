@@ -1,0 +1,21 @@
+{
+    "dev": {
+      "driver": "pg",
+      "host": "localhost",
+      "database": "nodejs-boilerplate",
+      "schema": "public"
+    },
+    "prod": {
+      "driver": "pg",
+      "host": "localhost",
+      "database": "nodejs-boilerplate",
+      "schema": "public"
+    },
+    "test": {
+      "driver": "pg",
+      "host": "localhost",
+      "database": "nodejs-boilerplate",
+      "schema": "public"
+    },
+    "other": "postgres://uname:pw@server.com/dbname"
+  }
