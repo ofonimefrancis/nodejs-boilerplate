@@ -16,7 +16,7 @@
     "body-parser": "^1.15.2",
     "convert-csv-to-array": "^1.0.3",
     "cors": "^2.8.5",
-    "csv-parse": "^4.4.3",
+    "csv-parse": "^4.4.6",
     "csv-parser": "^2.3.0",
     "csv-stream": "^0.2.0",
     "debug": "^2.6.0",
